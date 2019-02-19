@@ -6,11 +6,17 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MatToolbarModule, MatIconModule } from '@angular/material';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { PostsComponent } from './components/posts/posts.component';
+import { PostComponent } from './components/post/post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    NotFoundComponent,
+    PostsComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
