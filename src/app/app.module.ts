@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -9,6 +8,13 @@ import { MatToolbarModule, MatIconModule, MatCardModule, MatButtonModule, MatInp
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { PostComponent } from './components/post/post.component';
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import {UserService} from './services/user.service';
+import {PostService} from './services/post.service';
+
 
 @NgModule({
   declarations: [
@@ -26,9 +32,15 @@ import { PostComponent } from './components/post/post.component';
     MatIconModule,
     MatCardModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
-  providers: [],
+  providers: [
+    UserService,
+    PostService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
