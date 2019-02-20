@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { MatToolbarModule, MatIconModule, MatCardModule, MatButtonModule, MatInputModule } from '@angular/material';
+import { MatToolbarModule, MatIconModule, MatCardModule, MatButtonModule, MatInputModule, MatFormFieldModule } from '@angular/material';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { PostComponent } from './components/post/post.component';
@@ -15,6 +15,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import {UserService} from './services/user.service';
 import {PostService} from './services/post.service';
 import { HomeComponent } from './components/home/home.component';
+import { SubmitPostComponent } from './components/submit-post/submit-post.component';
+import { RegisterComponent } from './components/register/register.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,7 +27,9 @@ import { HomeComponent } from './components/home/home.component';
     NotFoundComponent,
     PostsComponent,
     PostComponent,
-    HomeComponent
+    HomeComponent,
+    SubmitPostComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -35,9 +40,11 @@ import { HomeComponent } from './components/home/home.component';
     MatCardModule,
     MatButtonModule,
     MatInputModule,
+    MatFormFieldModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    FormsModule
   ],
   providers: [
     UserService,
