@@ -6,7 +6,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MatToolbarModule, MatIconModule, MatCardModule, MatButtonModule, MatInputModule, MatFormFieldModule } from '@angular/material';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { PostsComponent } from './components/posts/posts.component';
 import { PostComponent } from './components/post/post.component';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
@@ -18,6 +17,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SubmitPostComponent } from './components/submit-post/submit-post.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -25,11 +25,11 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     NavbarComponent,
     NotFoundComponent,
-    PostsComponent,
     PostComponent,
     HomeComponent,
     SubmitPostComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
