@@ -2,3 +2,6 @@
   max-width: 300px;
   margin: 30px;
 }
+mat-grid-tile {
+  min-height: 600px;
+}

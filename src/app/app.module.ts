@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { MatToolbarModule, MatIconModule, MatCardModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatListModule, MatDividerModule } from '@angular/material';
+import { MatToolbarModule, MatIconModule, MatCardModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatListModule, MatDividerModule, MatGridListModule } from '@angular/material';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { PostComponent } from './components/post/post.component';
 import { environment } from '../environments/environment';
@@ -42,7 +42,8 @@ import { FormsModule } from '@angular/forms';
     AngularFireAuthModule,
     FormsModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    MatGridListModule
   ],
   providers: [
     UserService,

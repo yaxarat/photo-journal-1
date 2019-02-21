@@ -4,6 +4,7 @@ import { PostService } from '../../services/post.service';
 import { User } from '../../models/User';
 import { UserService } from '../../services/user.service';
 import { DatePipe } from '@angular/common';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-submit-post',
@@ -19,7 +20,8 @@ export class SubmitPostComponent implements OnInit {
   constructor(
     private postService: PostService,
     private userService: UserService,
-    private datePipe: DatePipe
+    private datePipe: DatePipe,
+    private router: Router
   ) {
     this.today = this.datePipe.transform(this.today, 'yyyy-MM-dd');
   }
@@ -40,5 +42,6 @@ export class SubmitPostComponent implements OnInit {
   }
     onSubmit() {
     this.postService.addPost(this.post);
+    this.router.navigate(['/']);
   }
 }

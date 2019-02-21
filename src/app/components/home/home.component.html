@@ -1,18 +1,22 @@
-<div *ngFor="let post of posts" style="margin: 50px">
-  <mat-card class="example-card" routerLink="/post/{{post.id}}">
-    <mat-card-header>
-      <mat-card-title align="left"><h3>{{post.title}}</h3></mat-card-title>
-      <mat-card-subtitle align="left">Written by {{post.writer}}</mat-card-subtitle>
-      <mat-card-subtitle align="left">Published on {{post.timestamp}}</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="{{post.image}}"  alt=""/>
-    <mat-card-content>
-      <p>
-        {{post.body}}
-      </p>
-    </mat-card-content>
-    <mat-card-actions align="left">
-      <mat-card-subtitle align="right" style="padding-right: 20px">{{post.like}} Thumbs Up</mat-card-subtitle>
-    </mat-card-actions>
-  </mat-card>
-</div>
+<mat-grid-list cols="4" rowHeight="600px">
+  <div *ngFor="let post of posts" style="margin: 50px">
+    <mat-grid-tile>
+      <mat-card class="example-card" routerLink="/post/{{post.id}}" style="margin: 20px">
+        <mat-card-header>
+          <mat-card-title align="left"><h3>{{post.title}}</h3></mat-card-title>
+          <mat-card-subtitle align="left">Written by {{post.writer}}</mat-card-subtitle>
+          <mat-card-subtitle align="left">Published on {{post.timestamp}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{post.image}}"  alt=""/>
+        <mat-card-content>
+          <p>
+            {{ post.body | slice:0:50 }}...
+          </p>
+        </mat-card-content>
+        <mat-card-actions align="left">
+          <mat-card-subtitle align="right" style="padding-right: 20px">{{post.like}} Thumbs Up</mat-card-subtitle>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </div>
+</mat-grid-list>

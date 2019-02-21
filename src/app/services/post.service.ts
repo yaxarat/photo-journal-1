@@ -45,7 +45,7 @@ export class PostService {
 
     return this.post;
   }
-  updateLike(post: Post) {
+  updatePost(post: Post) {
     this.postDoc = this.afs.doc(`posts/${post.id}`);
     this.postDoc.update(post);
   }
