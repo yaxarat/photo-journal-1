@@ -1,0 +1,27 @@
+.example-card {
+  max-width: 800px;
+}
+
+.example-header-image {
+  background-image: url('https://www.notion.so/front/about/people/ram.png');
+  background-size: cover;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.panel-margin {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+button {
+  padding-left: 20px;
+}

@@ -1,0 +1,51 @@
+<div class="panel-margin" align="center">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <!--<div mat-card-avatar class="example-header-image"></div>-->
+      <mat-card-title align="left"><h3>{{post.title}}</h3></mat-card-title>
+      <mat-card-subtitle align="left">Written by {{post.writer}} and published on {{post.timestamp}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="post.image"  alt="http://lorempixel.com/output/cats-q-c-900-900-7.jpg"/>
+    <mat-card-content style="padding-top: 30px">
+      <p>
+        {{post.body}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions align="left" style="padding-top: 30px">
+      <button mat-flat-button color="primary" style="margin-left: 20px" (click)="like()">Like</button>
+      <button mat-flat-button color="primary" style="margin-left: 20px">Save</button>
+      <mat-card-subtitle align="right" style="padding-right: 20px">{{post.like}} Thumbs Up</mat-card-subtitle>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<div class="panel-margin" align="center">
+  <mat-card class="example-card">
+    <mat-card-title align="left">Comments</mat-card-title>
+    <mat-card-content style="padding-top: 30px">
+      <ng-container *ngFor="let comment of post.comment; let i=index">
+        <mat-list>
+          <mat-divider></mat-divider>
+          <mat-list-item>{{comment}}</mat-list-item>
+          <mat-list-item><mat-card-subtitle>by {{post.commenter[i]}}</mat-card-subtitle></mat-list-item>
+          <mat-divider></mat-divider>
+        </mat-list>
+      </ng-container>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div class="panel-margin" align="center">
+  <mat-card class="example-card">
+    <mat-card-title align="left">Leave a comment</mat-card-title>
+    <div align="left">
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input name="comment" matInput #message maxlength="256" placeholder="Enter to submit">
+          <mat-hint align="start"><strong>Please adhere to the community guideline.</strong> </mat-hint>
+          <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+        </mat-form-field>
+      </form>
+    </div>
+  </mat-card>
+</div>

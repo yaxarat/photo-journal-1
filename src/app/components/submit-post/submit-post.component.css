@@ -1,0 +1,11 @@
+.example-card {
+  max-width: 800px;
+}
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}

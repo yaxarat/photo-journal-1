@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { MatToolbarModule, MatIconModule, MatCardModule, MatButtonModule, MatInputModule, MatFormFieldModule } from '@angular/material';
+import { MatToolbarModule, MatIconModule, MatCardModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatListModule, MatDividerModule } from '@angular/material';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { PostComponent } from './components/post/post.component';
 import { environment } from '../environments/environment';
@@ -15,9 +15,7 @@ import {UserService} from './services/user.service';
 import {PostService} from './services/post.service';
 import { HomeComponent } from './components/home/home.component';
 import { SubmitPostComponent } from './components/submit-post/submit-post.component';
-import { RegisterComponent } from './components/register/register.component';
 import { FormsModule } from '@angular/forms';
-import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -27,9 +25,7 @@ import { LoginComponent } from './components/login/login.component';
     NotFoundComponent,
     PostComponent,
     HomeComponent,
-    SubmitPostComponent,
-    RegisterComponent,
-    LoginComponent
+    SubmitPostComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +40,9 @@ import { LoginComponent } from './components/login/login.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    FormsModule
+    FormsModule,
+    MatListModule,
+    MatDividerModule
   ],
   providers: [
     UserService,
