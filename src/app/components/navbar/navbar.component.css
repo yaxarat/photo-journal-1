@@ -1,16 +1,12 @@
-.navbar-spacer {
-  padding: 0 15px;
+.spacer {
+  flex: auto;
 }
 
-.example-spacer {
-  flex: 1 1 auto;
+mat-toolbar {
+  height: 5vh;
 }
 
-.img-responsive {
-  height: auto;
-  width: auto;
-  max-height: 40px;
-  max-width: 250px;
+.link {
+  padding: 0 25px;
+  font-weight: lighter;
 }
-
-

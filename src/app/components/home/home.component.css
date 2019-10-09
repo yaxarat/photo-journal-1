@@ -1,7 +1,18 @@
-.example-card {
-  max-width: 300px;
-  margin: 30px;
+.main-content {
+  width: 800px;
+  height: auto;
+  margin: 150px auto;
 }
-mat-grid-tile {
-  min-height: 600px;
+
+.header-image {
+  height: 400px;
+  object-fit: cover;
+}
+
+mat-card-subtitle {
+  padding-top: 10px;
+}
+
+.post-abstract {
+  font-size: medium;
 }

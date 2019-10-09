@@ -14,6 +14,16 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.postService.getPosts().subscribe(posts => this.posts = posts);
+    this.sortByDueDate();
+  }
+
+  sortByDueDate(): void {
+    this.posts.sort((a: Post, b: Post) => {
+      const aDate = new Date(a.timestamp);
+      const bDate = new Date(b.timestamp);
+      return aDate.getTime() - bDate.getTime();
+
+    });
   }
 
 }
