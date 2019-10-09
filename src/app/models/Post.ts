@@ -5,6 +5,7 @@ export interface Post {
   writer: string;
   title: string;
   timestamp: string;
+  abstract: string;
   body: string;
   like: number;
   comment?: string[];
